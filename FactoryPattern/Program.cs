@@ -4,7 +4,12 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Console.Write("Enter the number of tires for the vehicle to you want to drive: ");
+            var input = int.Parse(Console.ReadLine());
+
+            var vehicle = VehicleFactory.GetVehicle(input);
+            vehicle.Drive();
+                        
         }
     }
 }
